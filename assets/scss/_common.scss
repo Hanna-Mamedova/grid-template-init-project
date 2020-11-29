@@ -59,25 +59,10 @@ a
 }
 p {
     color: $color-gray;
+
+    @include lg-min {
     font-size: 1.125rem;
-
-    &:first-of-type {
-        margin-top: -5px;
-
-        &:after {
-            right: -50px;
-            position: absolute;
-            top: 0;
-            width: 2px;
-            height: 200px;
-            content: "";
-            background-color: rgba(99, 117, 136, 0.1);
-
-            @include sm {
-                display: none;
-            }
-        }
-    }
+    }  
 }
 .btn,
 .btn-accent

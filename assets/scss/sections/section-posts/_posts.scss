@@ -1,0 +1,40 @@
+.posts {
+
+    h2 {
+        @extend %h2-margin;
+    }
+
+    @extend %paddings;
+
+ &__container {
+     @extend %container;
+ }   
+ &__grid {
+    display: grid;
+
+    margin-bottom: $gap;
+    grid-gap: $gap;
+
+    @include lg-min
+       {
+           grid-template-areas: 'b1 b1 b2 b3' 'b4 b5 b6 b6';
+           grid-template-columns: repeat(4, 1fr);
+       }
+    @include lg-md {
+        grid-template-areas: 'b1 b1 b2' 'b3 b4 b4' 'b5 b5 b6';
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+        grid-template-areas: 'b1 b2' 'b3 b4' 'b5 b6';
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+        grid-template-areas: 'b1' 'b2' 'b3' 'b4' 'b5' 'b6';
+        grid-template-columns: 1fr;
+    }
+ }
+ &__button {
+    @extend %button-accent;
+}
+}
+

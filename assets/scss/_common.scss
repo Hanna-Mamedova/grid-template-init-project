@@ -70,10 +70,6 @@ a
 }
 p {
     color: $color-gray;
-
-    @include lg-min {
-    font-size: 1.125rem;
-    }  
 }
 .btn,
 .btn-accent

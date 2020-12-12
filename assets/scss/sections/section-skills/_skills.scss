@@ -40,21 +40,7 @@
             grid-template-columns: 1fr;
         }
     }
-    &__button
-    {
-        display: flex;
-
-        justify-content: center;
-
-        .btn-accent {
-
-        @include sm-min {
-            min-width: 350px;
-        }
-
-        @include sm {
-                width: 100%;
-            }
+    &__button {
+        @extend %button-accent;
     }
-}
 }

@@ -5,3 +5,40 @@
     padding-right: $gap;
     padding-left: $gap;
 }
+
+%button-accent
+{
+    display: flex;
+
+    justify-content: center;
+
+    .btn-accent {
+
+    @include sm-min {
+        min-width: 350px;
+    }
+
+    @include sm {
+            width: 100%;
+        }
+}
+}
+
+%h2-margin {
+    margin-top: 0;
+}
+
+%paddings {
+    @include lg-min {    
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include lg-md {    
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include md {    
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

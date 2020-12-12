@@ -3,23 +3,10 @@
     letter-spacing: 0.055em;
 
     h2 {
-        margin-top: 0;
+        @extend %h2-margin;
     }
-
-    @include lg-min {    
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    @include lg-md {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    @include md {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+    
+    @extend %paddings;
 
     &__container {
         display: grid;
@@ -58,6 +45,11 @@
     }
 
     &__content {
+        p {
+            @include lg-min {
+                font-size: 1.125rem;
+                }  
+        }
         & p:first-of-type {
             position: relative;
             margin-top: -5px;

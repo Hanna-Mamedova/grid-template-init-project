@@ -1,0 +1,56 @@
+.footer {
+    padding: 50px 20px 70px;
+    text-align: center;
+    background-color: $color-primary;
+
+&__container {
+    @extend %container;
+}
+
+&__icons {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+
+    a {
+        display: block;
+        padding: 10px;
+        transition: color 0.5s;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    i {
+        font-size: 2.25em;
+    }
+
+    &::after {
+        position: absolute;
+        width: 75px;
+        height: 2px;
+        content: "";
+        background-color: rgba($color-light, 0.1);
+        bottom: -20px;
+        left: calc(50% - 75px / 2);
+    }
+}
+
+&__text span{
+    &:nth-of-type(1) {
+        letter-spacing: 0.33em;
+        margin-right: -0.5em;
+        font-weight: 100;
+    }
+
+    &:last-of-type {
+        font-weight: 700;
+        color: $color-gray-light;
+        letter-spacing: 0.05em;
+    }
+}
+}
+

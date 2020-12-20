@@ -108,5 +108,10 @@
         padding: $gap;
 
         letter-spacing: .088em;
+        transition: color 0.5s;
+
+        &:hover, :focus {
+            color: $color-accent;
+        }
     }
 }

@@ -7,7 +7,7 @@
         grid-gap: 20px;
         @extend %container;
         
-    @include md-min {
+    @include lg-min {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -49,12 +49,22 @@
         letter-spacing: 0.15em;
         transition: background-color .5s, border-color 0.5s;
 
+        &::placeholder {
+            color: $color-gray;
+            transition: color 0.5s;
+        }
+
         &:hover,
         &:focus {
             background-color: rgba($color-light, 0.15);
             border-color: rgba($color-light, 0.15);
-            border-bottom-color: $color-light;
+            border-bottom-color: $color-light; 
+
+            &::placeholder {
+                 color: #8c9bab;
+             }
         }
+
     }
     &:nth-of-type(1) {
         @include md-sm {
